@@ -1,0 +1,27 @@
+.navbar-brand.logo {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar-brand.logo:visited {
+  color: #fff;
+}
+.navbar-brand.logo:hover {
+  color: rgb(154, 185, 214);
+}
+
+.link {
+  list-style: none;
+}
+.link a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+a.active {
+  color: rgb(0, 110, 255);
+}
+.link a:hover {
+  color: rgb(154, 185, 214);
+}
