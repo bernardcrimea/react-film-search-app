@@ -4,7 +4,7 @@ import "./Pagination.scss";
 const Pagination = ({ pages, paginate, carrentPage }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i < Math.ceil(pages / 40); i++) {
+  for (let i = 1; i < Math.ceil(pages / 90); i++) {
     pageNumbers.push(i);
   }
 
