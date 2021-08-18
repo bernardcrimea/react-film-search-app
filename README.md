@@ -1,1 +1,1 @@
-To see react-film-search-app follow link https://film-search-spa.firebaseapp.com/
+To see react-film-search-app follow this link https://film-search-spa.firebaseapp.com/.
