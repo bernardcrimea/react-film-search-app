@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import rootReducer from "./store/reducers/rootReducer";
+import rootReducer from "store/reducers/rootReducer";
 import thunk from "redux-thunk";
-import "./index.scss";
+import "index.scss";
 import App from "./App";
 
 const composeEnhancers =

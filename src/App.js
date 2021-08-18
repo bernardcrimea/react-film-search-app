@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import Layout from "./hoc/layout";
+import Layout from "hoc/layout";
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
-import { Home } from "./pages/home";
-import { TopRatedList } from "./pages/topRated";
-import { Favorite } from "./pages/favorites";
-import { GlobalProvider } from "./context/globalState";
-import { Single } from "./pages/single";
-import Auth from "./containers/Auth/Auth";
-import "./App.css";
-import Logout from "./pages/logout";
-import { autoLogin } from "./store/actions/auth";
+import { Home } from "pages/home";
+import { TopRatedList } from "pages/topRated";
+import { Favorite } from "pages/favorites";
+import { GlobalProvider } from "context/globalState";
+import { Single } from "pages/single";
+import Auth from "containers/Auth/Auth";
+import "App.css";
+import Logout from "pages/logout";
+import { autoLogin } from "store/actions/auth";
 import { connect } from "react-redux";
 
 class App extends Component {
