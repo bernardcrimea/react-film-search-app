@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { CardResult } from "./cardResult";
 import Loader from "../containers/Loader/Loader";
+import { apiSearch } from "./api/movies";
 
 export default function FormSearch() {
   const [query, setQuery] = useState("");
@@ -13,11 +14,9 @@ export default function FormSearch() {
 
     setQuery(e.target.value);
 
-    const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&query=${e.target.value}`;
-
     try {
       axios
-        .get(SEARCH_URL)
+        .get(`${apiSearch}${e.target.value}`)
         .then((data) => {
           setResults(data.data.results);
           setLoading(false);

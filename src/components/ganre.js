@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { apiGenre } from "./api/movies";
 
 export const GenreSelectLinks = ({ id }) => {
   const [genres, setGenre] = useState([]);
 
   useEffect(() => {
-    const genreListsUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
     axios
-      .get(genreListsUrl)
+      .get(apiGenre)
       .then((res) => setGenre(res.data.genres))
       .catch((error) => {
         console.log(error);

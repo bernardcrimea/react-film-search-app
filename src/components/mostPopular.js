@@ -3,6 +3,7 @@ import axios from "axios";
 import { CardResult } from "../components/cardResult";
 import Loader from "../containers/Loader/Loader";
 import Pagination from "../containers/Pagination/Pagination";
+import { apiPopular } from "./api/movies";
 
 export const MostPopular = () => {
   const [movies, setMovies] = useState([]);
@@ -12,9 +13,8 @@ export const MostPopular = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const lastFilmsUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=${currentPage}`;
       await axios
-        .get(lastFilmsUrl)
+        .get(`${apiPopular}${currentPage}`)
         .then((res) => {
           setMovies(res.data.results);
           setPageCount(res.data.total_pages);

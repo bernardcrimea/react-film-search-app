@@ -3,6 +3,7 @@ import axios from "axios";
 import { CardResult } from "./cardResult";
 import Loader from "../containers/Loader/Loader";
 import Pagination from "../containers/Pagination/Pagination";
+import { apiRated } from "./api/movies";
 
 const TopRated = () => {
   const [raited, setReited] = useState([]);
@@ -12,9 +13,8 @@ const TopRated = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const reitedFilmsUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=${currentPage}`;
       await axios
-        .get(reitedFilmsUrl)
+        .get(`${apiRated}${currentPage}`)
         .then((res) => {
           setReited(res.data.results);
           setPageCount(res.data.total_pages);
