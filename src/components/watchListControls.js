@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../context/globalState";
+import { GlobalContext } from "context/globalState";
+
+import { Link } from "react-router-dom";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 const WatchListControls = ({ movie, type, id }) => {
   const {

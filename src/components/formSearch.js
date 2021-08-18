@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { CardResult } from "./cardResult";
-import Loader from "../containers/Loader/Loader";
-import { apiSearch } from "./api/movies";
+
+import { CardResult } from "components/cardResult";
+
+import Loader from "containers/Loader/Loader";
+
+import { apiSearch } from "components/api/movies";
 
 export default function FormSearch() {
   const [query, setQuery] = useState("");

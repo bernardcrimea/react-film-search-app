@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
-import "./Navbar.scss";
+import "containers/Navigation/Navbar.scss";
 
 class Navbar extends Component {
   renderList = (links) => {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Navbar from "../containers/Navigation/Navbar";
+import Navbar from "containers/Navigation/Navbar";
 import { connect } from "react-redux";
-import { Search } from "../pages/search";
+import { Search } from "pages/search";
 
 class Layout extends Component {
   render() {

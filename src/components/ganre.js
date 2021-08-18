@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { apiGenre } from "./api/movies";
+
+import { apiGenre } from "components/api/movies";
 
 export const GenreSelectLinks = ({ id }) => {
   const [genres, setGenre] = useState([]);

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { CardResult } from "../components/cardResult";
-import Loader from "../containers/Loader/Loader";
-import Pagination from "../containers/Pagination/Pagination";
-import { apiPopular } from "./api/movies";
+
+import { CardResult } from "components/cardResult";
+
+import Loader from "containers/Loader/Loader";
+import Pagination from "containers/Pagination/Pagination";
+
+import { apiPopular } from "components/api/movies";
 
 export const MostPopular = () => {
   const [movies, setMovies] = useState([]);

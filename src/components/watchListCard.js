@@ -1,5 +1,6 @@
 import React from "react";
-import WatchListControls from "./watchListControls";
+
+import WatchListControls from "components/watchListControls";
 
 const WatchListCard = ({ movie, type, id }) => {
   const style = {

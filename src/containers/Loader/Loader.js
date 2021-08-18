@@ -1,5 +1,5 @@
 import React from "react";
-import "./Loader.css";
+import "containers/Loader/Loader.css";
 
 const Loader = (props) => (
   <div className="lds-spinner">

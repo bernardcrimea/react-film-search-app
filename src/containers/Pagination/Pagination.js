@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pagination.scss";
+import "containers/Pagination/Pagination.scss";
 
 const Pagination = ({ pages, paginate, carrentPage }) => {
   const pageNumbers = [];

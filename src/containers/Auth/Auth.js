@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import classes from "./Auth.scss";
+import classes from "containers/Auth/Auth.scss";
 import { connect } from "react-redux";
-import { auth } from "../../store/actions/auth";
+import { auth } from "store/actions/auth";
 
 function validateEmail(email) {
   const re =

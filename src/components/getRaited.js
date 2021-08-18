@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { CardResult } from "./cardResult";
-import Loader from "../containers/Loader/Loader";
-import Pagination from "../containers/Pagination/Pagination";
-import { apiRated } from "./api/movies";
+
+import { CardResult } from "components/cardResult";
+
+import Loader from "containers/Loader/Loader";
+import Pagination from "containers/Pagination/Pagination";
+
+import { apiRated } from "components/api/movies";
 
 const TopRated = () => {
   const [raited, setReited] = useState([]);

@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { GlobalContext } from "../context/globalState";
+import { GlobalContext } from "context/globalState";
 
 export const Single = () => {
   const [single, setSingleMovie] = useState([]);

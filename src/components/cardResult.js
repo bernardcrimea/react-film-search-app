@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../context/globalState";
+import { GlobalContext } from "context/globalState";
+
+import { apiImg200, apiPlh200 } from "components/api/movies";
 // import { GenreSelectLinks } from "./ganre";
 
 export const CardResult = ({ movie }) => {
@@ -25,14 +27,11 @@ export const CardResult = ({ movie }) => {
     <div className="card bg-dark text-white" style={style}>
       {movie.poster_path ? (
         <img
-          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+          src={`${apiImg200}${movie.poster_path}`}
           alt={`${movie.title} Poster`}
         />
       ) : (
-        <img
-          src={`https://via.placeholder.com/245x370`}
-          alt={`${movie.title} Poster`}
-        />
+        <img src={apiPlh200} alt={`${movie.title} Poster`} />
       )}
 
       <div className="card-img-overlay">

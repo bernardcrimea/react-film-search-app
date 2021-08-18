@@ -1,5 +1,5 @@
 import React from "react";
-import TopRaited from "../components/getRaited";
+import TopRaited from "components/getRaited";
 
 export const TopRatedList = () => {
   return (
