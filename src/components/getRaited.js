@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 import { CardResult } from "components/cardResult";
 
 import Loader from "containers/Loader/Loader";
 import Pagination from "containers/Pagination/Pagination";
 
-import { apiRated } from "components/api/movies";
+import { getRatedAPI } from "components/api/movies";
 
 const TopRated = () => {
   const [raited, setReited] = useState([]);
@@ -15,9 +14,8 @@ const TopRated = () => {
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    const getData = async () => {
-      await axios
-        .get(`${apiRated}${currentPage}`)
+    const getData = () => {
+      getRatedAPI(currentPage)
         .then((res) => {
           setReited(res.data.results);
           setPageCount(res.data.total_pages);

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 import { CardResult } from "components/cardResult";
 
 import Loader from "containers/Loader/Loader";
 
-import { apiSearch } from "components/api/movies";
+import { searchAPI } from "components/api/movies";
 
 export default function FormSearch() {
   const [query, setQuery] = useState("");
@@ -18,8 +17,7 @@ export default function FormSearch() {
     setQuery(e.target.value);
 
     try {
-      axios
-        .get(`${apiSearch}${e.target.value}`)
+      searchAPI(e)
         .then((data) => {
           setResults(data.data.results);
           setLoading(false);

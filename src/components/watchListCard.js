@@ -1,5 +1,7 @@
 import React from "react";
 
+import { apiImg200, apiPlh200 } from "components/api/movies";
+
 import WatchListControls from "components/watchListControls";
 
 const WatchListCard = ({ movie, type, id }) => {
@@ -16,14 +18,11 @@ const WatchListCard = ({ movie, type, id }) => {
     <div className="card bg-dark text-white">
       {movie.poster_path ? (
         <img
-          src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+          src={`${apiImg200}${movie.poster_path}`}
           alt={`${movie.title} Poster`}
         />
       ) : (
-        <img
-          src={`https://via.placeholder.com/245x370`}
-          alt={`${movie.title} Poster`}
-        />
+        <img src={apiPlh200} alt={`${movie.title} Poster`} />
       )}
 
       <div className="card-img-overlay">

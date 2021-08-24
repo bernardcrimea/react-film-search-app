@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
-import { apiGenre } from "components/api/movies";
+import { genreAPI } from "components/api/movies";
 
 export const GenreSelectLinks = ({ id }) => {
   const [genres, setGenre] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(apiGenre)
+    genreAPI()
       .then((res) => setGenre(res.data.genres))
       .catch((error) => {
         console.log(error);

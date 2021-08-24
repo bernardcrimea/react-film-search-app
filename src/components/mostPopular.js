@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 import { CardResult } from "components/cardResult";
 
 import Loader from "containers/Loader/Loader";
 import Pagination from "containers/Pagination/Pagination";
 
-import { apiPopular } from "components/api/movies";
+import { mostPopulardAPI } from "components/api/movies";
 
 export const MostPopular = () => {
   const [movies, setMovies] = useState([]);
@@ -15,9 +14,8 @@ export const MostPopular = () => {
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    const getData = async () => {
-      await axios
-        .get(`${apiPopular}${currentPage}`)
+    const getData = () => {
+      mostPopulardAPI(currentPage)
         .then((res) => {
           setMovies(res.data.results);
           setPageCount(res.data.total_pages);
